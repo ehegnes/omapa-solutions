@@ -2,7 +2,7 @@ C        = glpsol
 FILES    = $(wildcard *.mod)
 OUTFILES = $(patsubst %.mod,%.out,$(FILES))
 
-all: $(FILES)
+all: $(OUTFILES)
 
 %.out: %.mod
 	$(C) --math $< -o $@
